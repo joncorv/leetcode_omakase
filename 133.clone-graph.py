@@ -61,8 +61,6 @@ class Solution:
 
         while to_process:
             cur_node = to_process.pop()
-            print(cur_node)
-            # process children first
             this_nodes_children = []
 
             if cur_node.neighbors:
