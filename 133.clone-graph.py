@@ -1,38 +1,39 @@
 # @leet imports start
-from string import *
-from re import *
-from datetime import *
-from collections import *
-from heapq import *
-from bisect import *
-from copy import *
-from math import *
-from random import *
-from statistics import *
-from itertools import *
-from functools import *
-from operator import *
-from io import *
-from sys import *
-from json import *
-from builtins import *
-import string
-import re
-import datetime
-import collections
-import heapq
 import bisect
+import collections
 import copy
-import math
-import random
-import statistics
-import itertools
+import datetime
 import functools
-import operator
+import heapq
 import io
-import sys
+import itertools
 import json
+import math
+import operator
+import random
+import re
+import statistics
+import string
+import sys
+from bisect import *
+from builtins import *
+from collections import *
+from copy import *
+from datetime import *
+from functools import *
+from heapq import *
+from io import *
+from itertools import *
+from json import *
+from math import *
+from operator import *
+from random import *
+from re import *
+from statistics import *
+from string import *
+from sys import *
 from typing import *
+
 # @leet imports end
 
 # @leet start
@@ -45,7 +46,39 @@ class Node:
 """
 
 from typing import Optional
+
+
 class Solution:
-    def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:
-        
+    def cloneGraph(self, node: Optional["Node"]) -> Optional["Node"]:
+
+        seen = set()
+        node_data = {}
+        to_process = []
+
+        if node:
+            seen.add(node.val)
+            to_process.append(node)
+
+        while to_process:
+            cur_node = to_process.pop()
+            print(cur_node)
+            # process children first
+            this_nodes_children = []
+
+            # if for all neighbors, if they haven't been seen, add to to_process
+            # also add their value to this_nodes_children no matter what
+            if cur_node.neighbors:
+                for child in cur_node.neighbors:
+                    this_nodes_children.append(child.val)
+
+                    if child.val not in seen:
+                        to_process.append(child)
+                        seen.add(child.val)
+
+            node_data[cur_node.val] = this_nodes_children
+
+        print(node_data)
+        return None
+
+
 # @leet end
