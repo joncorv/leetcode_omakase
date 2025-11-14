@@ -65,8 +65,6 @@ class Solution:
             # process children first
             this_nodes_children = []
 
-            # if for all neighbors, if they haven't been seen, add to to_process
-            # also add their value to this_nodes_children no matter what
             if cur_node.neighbors:
                 for child in cur_node.neighbors:
                     this_nodes_children.append(child.val)
@@ -77,8 +75,22 @@ class Solution:
 
             node_data[cur_node.val] = this_nodes_children
 
+        result = []
+        for i in range(len(seen) -1):
+            result.append( Node(i))
+
+        for cur_node in result:
+            neighbors = node_data.get(cur_node.val)
+
+            if neighbors:
+                for neigh in neighbors:
+                    cur_node.neighbors.append(neigh)
+
+
+
+
         print(node_data)
-        return None
+        return result
 
 
 # @leet end
