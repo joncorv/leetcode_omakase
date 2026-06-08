@@ -22,25 +22,25 @@ A curated selection of essential interview problems, randomly ordered. No hints,
 - [x] LC 200 - Number of Islands
 - [x] LC 242 - Valid Anagram
 - [x] LC 704 - Binary Search
-- [ ] LC 15 - 3Sum
+- [x] LC 15 - 3Sum
 - [ ] LC 70 - Climbing Stairs
 - [x] LC 226 - Invert Binary Tree
-- [ ] LC 76 - Minimum Window Substring
+- [-] LC 76 - Minimum Window Substring
 - [x] LC 217 - Contains Duplicate
 - [x] LC 141 - Linked List Cycle
-- [ ] LC 49 - Group Anagrams
+- [x] LC 49 - Group Anagrams
 - [ ] LC 53 - Maximum Subarray
 - [x] LC 100 - Same Tree
 - [ ] LC 207 - Course Schedule
 - [ ] LC 56 - Merge Intervals
 - [ ] LC 33 - Search in Rotated Sorted Array
-- [ ] LC 347 - Top K Frequent Elements
+- [x] LC 347 - Top K Frequent Elements
 - [ ] LC 98 - Validate Binary Search Tree
 - [ ] LC 5 - Longest Palindromic Substring
 - [ ] LC 54 - Spiral Matrix
 - [ ] LC 79 - Word Search
 - [ ] LC 155 - Min Stack
-- [ ] LC 215 - Kth Largest Element in an Array
+- [x] LC 215 - Kth Largest Element in an Array
 - [ ] LC 572 - Subtree of Another Tree
 - [ ] LC 322 - Coin Change
 - [x] LC 57 - Insert Interval
