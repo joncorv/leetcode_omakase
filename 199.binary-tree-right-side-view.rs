@@ -22,32 +22,72 @@ use std::rc::Rc;
 impl Solution {
     pub fn right_side_view(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<i32> {
         use std::collections::VecDeque;
+        let mut result: Vec<i32> = Vec::new();
 
-        let odd_nodes: VecDeque<Option<Rc<RefCell<TreeNode>>>> = VecDeque::new();
-        let even_nodes: VecDeque<Option<Rc<RefCell<TreeNode>>>> = VecDeque::new();
+        let mut even_nodes: VecDeque<Option<Rc<RefCell<TreeNode>>>> = VecDeque::new();
+        let mut odd_nodes: VecDeque<Option<Rc<RefCell<TreeNode>>>> = VecDeque::new();
 
-        odd_nodes.push_front(root);
+        even_nodes.push_front(root);
 
-        'outer: loop {
-            while !even_nodes.is_empty() || !odd_nodes.is_empty() {
-                for node in odd_nodes {
-                    if let Some(some_node) = node {
-                        let test_node = some_node.borrow();
-                        println!("test_node: {test_node.val}");
+        while !&even_nodes.is_empty() || !&odd_nodes.is_empty() {
+            // even nodes processing
+            let mut found_even = false;
+            while let Some(front_node) = even_nodes.pop_front() {
+                if let Some(node) = front_node {
+                    let borrow = node.borrow();
+                    // let foo = node.as_ptr();
+                    // let foo = node.borrow();
+
+                    // println!("foo: {foo:?}");
+
+                    // let borrow_val = borrow.val;
+                    // let borrow_right = &borrow.right;
+                    // let borrow_left = borrow.right;
+
+                    if !found_even {
+                        result.push(borrow.val);
+                        found_even = true;
                     }
+
+                    odd_nodes.push_back(borrow.right.clone());
+                    // odd_nodes.push_back(borrow_left);
                 }
             }
+
+            // odd nodes processing
+            // let mut found_odd = false;
+            // while let Some(front_node) = odd_nodes.pop_front() {
+            //     if let Some(node) = front_node {
+            //         let borrow = node.borrow();
+            //
+            //         if !found_odd {
+            //             result.push(borrow.val);
+            //             found_odd = true;
+            //         }
+            //         even_nodes.push_back(&borrow.right);
+            //         even_nodes.push_back(&borrow.left);
+            //     }
+            // }
         }
 
-        if let Some(node) = root {
-            // println!("root: {node:?}");
+        // even_nodes.iter().for_each(|x| {
+        //
+        // }));
 
-            let current_node = node.borrow();
-            println!("RefCell contents: {:?}", current_node.val);
-        }
+        // for node in even_nodes {
+        //     if let Some(some_node) = node {
+        //         // some_node.borrow();
+        //         println!("test_node: {:?}", some_node.borrow().val);
+        //     }
+        // }
 
-        let dummy: Vec<i32> = Vec::new();
-        dummy
+        // if let Some(node) = root {
+        //     // println!("root: {node:?}");
+        //     let current_node = node.borrow();
+        //     println!("RefCell contents: {:?}", current_node.val);
+        // }
+
+        result
     }
 }
 // @leet end
