@@ -21,6 +21,24 @@ use std::cell::RefCell;
 use std::rc::Rc;
 impl Solution {
     pub fn right_side_view(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<i32> {
+        use std::collections::VecDeque;
+
+        let odd_nodes: VecDeque<Option<Rc<RefCell<TreeNode>>>> = VecDeque::new();
+        let even_nodes: VecDeque<Option<Rc<RefCell<TreeNode>>>> = VecDeque::new();
+
+        odd_nodes.push_front(root);
+
+        'outer: loop {
+            while !even_nodes.is_empty() || !odd_nodes.is_empty() {
+                for node in odd_nodes {
+                    if let Some(some_node) = node {
+                        let test_node = some_node.borrow();
+                        println!("test_node: {test_node.val}");
+                    }
+                }
+            }
+        }
+
         if let Some(node) = root {
             // println!("root: {node:?}");
 
