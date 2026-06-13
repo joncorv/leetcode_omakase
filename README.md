@@ -45,7 +45,7 @@ A curated selection of essential interview problems, randomly ordered. No hints,
 - [ ] LC 322 - Coin Change
 - [x] LC 57 - Insert Interval
 - [ ] LC 199 - Binary Tree Right Side View
-- [ ] LC 739 - Daily Temperatures
+- [-] LC 739 - Daily Temperatures
 - [ ] LC 46 - Permutations
 - [ ] LC 153 - Find Minimum in Rotated Sorted Array
 - [ ] LC 105 - Construct Binary Tree from Preorder and Inorder Traversal
