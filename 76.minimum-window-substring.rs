@@ -1,14 +1,6 @@
 // @leet start
 impl Solution {
-    pub fn is_valid_substring(small: &str, large: &str) -> bool {
-        let mut large = large.chars();
-
-        for sm_ch in small.chars() {
-            if let Some(found_index) = large.position(sm_ch) {
-                large.rem
-            }
-        }
-
+    pub fn contains_window_substring(small: &str, large: &str) -> bool {
         false
     }
 
@@ -34,8 +26,9 @@ impl Solution {
         while right <= large.len() {
             let mut testing_group: Vec<char> = large.get(left..right).unwrap().chars().collect();
 
+            let found_good_window = false;
             for ch in small {
-                let found_index = testing_group.find(ch);
+                let found_index = testing_group.iter.position(ch);
 
                 if let Some(idx) = testing_group.find(ch) {
                     testing_group.remove(idx);
