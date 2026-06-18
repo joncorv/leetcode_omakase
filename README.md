@@ -49,7 +49,7 @@ A curated selection of essential interview problems, randomly ordered. No hints,
 - [-] LC 46 - Permutations
 - [x] LC 153 - Find Minimum in Rotated Sorted Array
 - [ ] LC 105 - Construct Binary Tree from Preorder and Inorder Traversal
-- [ ] LC 39 - Combination Sum
+- [x] LC 39 - Combination Sum
 - [ ] LC 198 - House Robber
 - [ ] LC 234 - Palindrome Linked List
 - [ ] LC 435 - Non-overlapping Intervals
