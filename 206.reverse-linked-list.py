@@ -36,6 +36,7 @@ from typing import *
 
 # @leet imports end
 
+
 # @leet start
 # Definition for singly-linked list.
 # class ListNode:
@@ -44,16 +45,13 @@ from typing import *
 #         self.next = next
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        dummy = current = head
 
-        prev = None
-        curr = head
+        current = ListNode(val=0, next=dummy)
 
-        while curr:
-            next_temp = curr.next
-            curr.next = prev
-            prev = curr
-            curr = next_temp
+        while current:
+            print(current.val)
+            current = current.next
 
-        return prev
-        
+
 # @leet end

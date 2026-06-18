@@ -1,5 +1,17 @@
 // @leet start
 impl Solution {
+    pub fn is_valid_substring(small: &str, large: &str) -> bool {
+        let mut large = large.chars();
+
+        for sm_ch in small.chars() {
+            if let Some(found_index) = large.position(sm_ch) {
+                large.rem
+            }
+        }
+
+        false
+    }
+
     pub fn min_window(s: String, t: String) -> String {
         // the rules say this won't happen, but i'm doing it anyway
         if s.is_empty() || t.is_empty() {
