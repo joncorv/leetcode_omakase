@@ -132,7 +132,7 @@ to hard.
 
 ### Backtracking (explore, choose, undo)
 
-- [ ] LC 78 - Subsets (M)
+- [x] LC 78 - Subsets (M)
 - [x] LC 46 - Permutations (M)
 - [ ] LC 77 - Combinations (M)
 - [x] LC 39 - Combination Sum (M)
