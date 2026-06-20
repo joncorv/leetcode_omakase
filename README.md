@@ -136,7 +136,7 @@ to hard.
 - [x] LC 46 - Permutations (M)
 - [x] LC 77 - Combinations (M)
 - [x] LC 39 - Combination Sum (M)
-- [ ] LC 79 - Word Search (M)
+- [-] LC 79 - Word Search (M)
 
 ---
 
